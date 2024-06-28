@@ -694,20 +694,53 @@ body {
 }
 
 /* Footer end */
-#gallery {
-  margin: 0 auto; /* center gallery */
-  width: 1200px; /* set width */
-  /* Three column grid with 1em gap */
+/* .gallery {
+  margin: 0 auto; 
+  width: 1200px; 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1em;
+  border: 1px solid white;
+  border-radius: 15px;
+  background-color: #318d44;
+  padding: 20px;
 }
 
 figure {
-  display: block; /* make figure a block */
-  text-align: center; /* center content */
+  margin: 20px;
+  display: block; 
+  text-align: center; 
   padding: 1em;
-  transition: all 1s; /* hover transition */
+  transition: all 1s; 
+}
+
+figure img {
+  width: 100%;
+}
+
+figure:hover {
+  transform: scale(1.1);
+} */
+
+.gallery {
+  margin: 0 auto; /* center gallery */
+  width: 90%; /* set width to a percentage for responsiveness */
+  max-width: 1200px; /* maximum width */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 1px solid white;
+  border-radius: 15px;
+  background-color: #318d44;
+  padding: 20px;
+}
+
+figure {
+  margin: 20px;
+  display: flex;
+  text-align: center;
+  padding: 1em;
+  transition: all 1s;
+  flex-direction: column;
+  gap: 10px;
 }
 
 /* make the image fit inside the figure block */
@@ -716,7 +749,34 @@ figure img {
 }
 
 /* on hover, transform the contents of figure to be 1.1 times larger */
-
 figure:hover {
   transform: scale(1.1);
+}
+
+figcaption {
+  color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    padding: 10px;
+  }
+
+  figure {
+    margin: 10px;
+    padding: 0.5em;
+  }
 }
