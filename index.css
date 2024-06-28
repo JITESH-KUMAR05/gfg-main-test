@@ -209,7 +209,7 @@ body {
 
 /* Header start */
 
-#header-wrap {
+.header-wrap {
   display: flex;
   flex-direction: row-reverse;
   align-items: flex-end;
@@ -218,40 +218,40 @@ body {
   gap: 2vw;
 }
 
-#header-text {
+.header-text {
   margin-top: 1.5rem;
 }
 
-#bonjour {
+.bonjour {
   color: #318d44;
   font-weight: 500;
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-#welcome {
+.welcome {
   font-size: 3rem;
   font-weight: 500;
   margin-bottom: 1rem;
 }
 
-#geeksforgeeks {
+.geeksforgeeks {
   color: #318d44;
   font-weight: 900;
 }
 
-#description {
+.description {
   line-height: 1.5rem;
   text-align: justify;
 }
 
-#header-img img {
+.header-img img {
   width: 50vw;
   max-width: 900px;
 }
 
 @media screen and (max-width: 980px) {
-  #header-wrap {
+  .header-wrap {
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-start;
@@ -259,19 +259,19 @@ body {
     width: auto;
   }
 
-  #header-img img {
+  .header-img img {
     margin-top: 2rem;
     width: 100%;
     max-width: none;
   }
 
-  #welcome {
+  .welcome {
     font-size: 2.4rem;
     font-weight: 500;
     margin-bottom: 1rem;
   }
 
-  #header-text {
+  .header-text {
     margin-top: 0;
   }
 }
@@ -694,3 +694,29 @@ body {
 }
 
 /* Footer end */
+#gallery {
+  margin: 0 auto; /* center gallery */
+  width: 1200px; /* set width */
+  /* Three column grid with 1em gap */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+}
+
+figure {
+  display: block; /* make figure a block */
+  text-align: center; /* center content */
+  padding: 1em;
+  transition: all 1s; /* hover transition */
+}
+
+/* make the image fit inside the figure block */
+figure img {
+  width: 100%;
+}
+
+/* on hover, transform the contents of figure to be 1.1 times larger */
+
+figure:hover {
+  transform: scale(1.1);
+}
