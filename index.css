@@ -393,7 +393,87 @@ body {
     transform: translate(-4.4rem, -5rem) !important;
   }
 }
+#founderIcon{
+  width: 85%;
+  height: 80%;
+  border-radius: 50%;
+  border: 3px solid white;
 
+}
+
+.founder {
+  
+  background-color: #308d42;
+  padding: 10px 20px 10px 20px;
+  width: 60%;
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+                0 6px 20px rgba(0, 0, 0, 0.1);
+  
+
+}
+.founder2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .founder2 {
+    flex-direction: column;
+  }
+  .founder{
+    width: 85%;
+  }
+}
+
+
+.imgWrapper{
+  width: 300px;
+  height: 300px;
+  flex: 1;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 90px;
+  
+}
+#founderHeader1{
+  font-weight: bold;
+  margin-bottom: -7px;
+}
+#mainhead{
+  font-weight: bolder;
+}
+
+.founderDetails {
+  color: white;
+  flex: 2;
+  padding: 30px 0 20px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 3s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.founderDetails h2 {
+  margin: 0;
+}
+
+#founderInfo {
+  line-height: 20px;
+  width: 95%;
+  font-weight: 500;
+
+}
 /* Events end */
 
 /* Team start  */
